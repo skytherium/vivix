@@ -1,0 +1,103 @@
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #070B1D 0%, #0A0F2A 100%);
+    border-radius: 0px 40px 40px 0px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+}
+
+.user-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.rank {
+    font-size: 14px;
+    color: #ffb300;
+    margin-bottom: 10px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #009dff;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 157, 255, 0.5);
+}
+
+.checkmark {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #00e676;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 6px #00e676;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.referrals {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.balance {
+    font-size: 18px;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-item {
+    padding: 12px 24px;
+    border-radius: 32px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    color: white;
+    background: radial-gradient(69.39% 69.39% at 50% 50%, rgba(38, 187, 241, 0.08) 0%, rgba(38, 187, 241, 0) 100%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: radial-gradient(69.39% 69.39% at 50% 50%, rgba(38, 187, 241, 0.2) 0%, rgba(38, 187, 241, 0) 100%);
+}
+
+.menu-item.active {
+    background: linear-gradient(90deg, #3D8BFF 0%, #7B66FF 100%);
+    color: #fff;
+}

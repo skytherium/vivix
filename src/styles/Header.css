@@ -1,0 +1,114 @@
+.header-main {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    backdrop-filter: blur(4.5px);
+}
+
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1216px;
+    height: 68px;
+    padding: 12px 32px;
+    gap: 80px;
+
+    background: rgba(14, 17, 35, 0.3); /* как Fill Bg 30% */
+    border: 1px solid rgba(177, 238, 255, 0.12); /* Stroke 12% */
+    backdrop-filter: blur(8px); /* Effects */
+    border-radius: 120px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+}
+
+.menu-line {
+    display: flex;
+    gap: 32px;
+}
+
+.header-button {
+    color: #b0dfff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    padding: 6px 14px;
+    border-radius: 24px;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.header-button:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.login-button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 194, 255, 0.4);
+    transition: transform 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.login-button:hover {
+    transform: scale(1.05);
+}
+.header-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: #00c6ff;
+    opacity: 0;
+    transform: scaleX(0.5);
+    transition: 0.3s ease;
+}
+
+.header-button:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+.header-button.active {
+    background: rgba(22, 25, 44, 0.6); /* ближе к Figma */
+    border: 1px solid rgba(0, 217, 255, 0.12);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 0 6px rgba(0, 194, 255, 0.25); /* мягкий свет */
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.header-button.active::after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 3px;
+    height: 2px;
+    background: #00cfff;
+    border-radius: 1px;
+    box-shadow: 0 0 4px #00cfff;
+}
+
+
+

@@ -1,0 +1,135 @@
+.referral-block {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* тёмный градиентный фон :contentReference[oaicite:1]{index=1} */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: #fff; /* базовый цвет текста на тёмном фоне */
+    font-family: sans-serif;
+}
+
+/* Отображение уровня с венком */
+.level-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.level-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* Иконка-венок: контейнер и листья */
+.wreath-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+.wreath-icon .leaf {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 6px;
+    height: 16px;
+    background: #ffd700;           /* золотой цвет листа */
+    border: 1px solid #b38e00;     /* тёмно-золотой контур для детали */
+    border-radius: 50%;           /* овальная форма листа */
+    transform-origin: 50% 100%;   /* точка поворота – низ центра листа */
+}
+/* Расположение 12 листьев под разными углами (30° шаг) */
+.wreath-icon .leaf:nth-child(1)  { transform: translateX(-50%) rotate(0deg); }
+.wreath-icon .leaf:nth-child(2)  { transform: translateX(-50%) rotate(30deg); }
+.wreath-icon .leaf:nth-child(3)  { transform: translateX(-50%) rotate(60deg); }
+.wreath-icon .leaf:nth-child(4)  { transform: translateX(-50%) rotate(90deg); }
+.wreath-icon .leaf:nth-child(5)  { transform: translateX(-50%) rotate(120deg); }
+.wreath-icon .leaf:nth-child(6)  { transform: translateX(-50%) rotate(150deg); }
+.wreath-icon .leaf:nth-child(7)  { transform: translateX(-50%) rotate(180deg); }
+.wreath-icon .leaf:nth-child(8)  { transform: translateX(-50%) rotate(210deg); }
+.wreath-icon .leaf:nth-child(9)  { transform: translateX(-50%) rotate(240deg); }
+.wreath-icon .leaf:nth-child(10) { transform: translateX(-50%) rotate(270deg); }
+.wreath-icon .leaf:nth-child(11) { transform: translateX(-50%) rotate(300deg); }
+.wreath-icon .leaf:nth-child(12) { transform: translateX(-50%) rotate(330deg); }
+
+/* Прогресс-бар уровня */
+.progress-bar {
+    width: 100%;
+    background: #444;
+    border-radius: 4px;
+    overflow: hidden;      /* скругляем края заполнения внутри */
+    margin-bottom: 4px;
+}
+.progress-fill {
+    display: block;
+    height: 8px;
+    background: #4caf50;   /* цвет заполнения прогресса (акцентный) */
+}
+.progress-label {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 16px;
+}
+
+/* Поля ввода и подписи */
+.field {
+    margin-bottom: 12px;
+}
+.field label {
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 4px;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+}
+.input-group input {
+    flex: 1;
+    min-width: 0;               /* позволяет сжиматься при длинном тексте */
+    padding: 8px;
+    font-size: 15px;
+    color: #fff;
+    background: #333;
+    border: 1px solid #555;
+    border-right: none;         /* убираем правую рамку, чтобы не было двойной линии с кнопкой */
+    border-radius: 4px 0 0 4px;
+    height: 40px;
+}
+.copy-btn {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    border: 1px solid #555;
+    border-left: none;          /* убираем левую линию, смыкаем с input */
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    position: relative;
+}
+/* Иконка копирования (два накладывающихся квадрата) */
+.copy-btn::before,
+.copy-btn::after {
+    content: "";
+    position: absolute;
+    border: 2px solid #fff;    /* белые рамки (линии бумаги) */
+    border-radius: 2px;
+    background: #333;          /* заливка тем же цветом, что фон кнопки */
+}
+.copy-btn::before {
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: 4px;
+}
+.copy-btn::after {
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: 8px;
+}
+
+/* Текст "Ваш наставник" */
+.mentor {
+    font-size: 14px;
+    color: #ccc;
+}
